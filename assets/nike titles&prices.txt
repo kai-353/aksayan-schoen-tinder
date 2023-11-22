@@ -1,0 +1,10 @@
+nike1= Nike Air Force 1 '07		€90,97
+nike2= Nike Dunk Low Retro		€119,99
+nike3= Nike Air Max 90			€95,97
+nike4= Nike Court Vision Mid Winter	€89,99
+nike5= Nike Air Max Pulse		€159,99
+nike6= Nike Air Force 1 '07		€119,99
+nike7= Nike Dunk Low Retro		€119,99
+nike8= Air Jordan 1 Zoom CMFT 2		€118,97
+nike9= Nike P-6000			€109,99
+nike10= Air Jordan 13 'Wheat'		€209,99
