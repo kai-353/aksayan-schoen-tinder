@@ -2,6 +2,7 @@
   --raisin-black: #272727;
   --pink: #ff858d;
   --apple: #007aff;
+  --product-background: #f6f6f6;
 }
 
 html,
@@ -9,30 +10,149 @@ body {
   background-color: var(--raisin-black);
   margin: 0;
   padding: 0;
+  font-family: monospace;
 }
 
 body {
-  height: min(800px, 100vh);
+  min-height: min(800px, 100vh);
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100%;
 }
 
 #container {
-  height: max(80%, 600px);
+  margin-top: 10rem;
+  height: 400px;
   position: relative;
   /* background-color: var(--pink); */
   aspect-ratio: 9 / 16;
+}
+
+.favorites {
+  margin-top: 10rem;
+  width: min(400px, 80%);
+  margin-bottom: 10rem;
+}
+
+.favorites > h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.favorite {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "image text";
+  height: 100px;
+  position: relative;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1.5px solid var(--pink);
+}
+
+.favorite-text {
+  grid-area: text;
+  background-color: var(--product-background);
+  border-left: 2px solid var(--pink);
+  position: relative;
+  user-select: none;
+}
+
+.favorite-text > h4 {
+  position: absolute;
+  left: 1rem;
+  margin: 0;
+  top: 15%;
+  font-size: 14px;
+  transform: translateY(50%);
+}
+
+.favorite-text > p {
+  position: absolute;
+  left: 1rem;
+  top: 45%;
+  transform: translateY(50%);
+}
+
+#choiceSpan {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  display: block;
+  transform: translateY(50%);
+  top: 50%;
 }
 
 .product {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #007aff;
+  background-color: var(--product-background);
   user-select: none;
+  touch-action: none;
+  border-radius: 0.5rem;
+  border: 3px solid var(--pink);
+}
+
+.background-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.product-title {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 0.5rem;
+  font-size: 16px;
+  margin: 0;
+}
+
+.product-price {
+  position: absolute;
+  bottom: 2rem;
+  left: 0.5rem;
+  font-size: 12px;
+  margin: 0;
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.25rem;
+}
+
+.btn {
+  display: table-cell;
+  /* color: #fff; */
+  color: #000;
+  border: 3px solid var(--apple);
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ready > .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
 }
